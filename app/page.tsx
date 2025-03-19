@@ -30,9 +30,6 @@ export default function Home() {
             </Link>
           </nav>
           <div className="flex items-center gap-4">
-            <Button variant="outline" size="sm">
-              Login
-            </Button>
             <Button size="sm">Get Started</Button>
           </div>
         </div>
@@ -617,9 +614,8 @@ export default function Home() {
               ].map((plan, index) => (
                 <div
                   key={index}
-                  className={`flex flex-col rounded-lg border ${
-                    plan.popular ? "border-primary shadow-lg" : "border-border shadow-sm"
-                  } p-6`}
+                  className={`flex flex-col rounded-lg border ${plan.popular ? "border-primary shadow-lg" : "border-border shadow-sm"
+                    } p-6`}
                 >
                   {plan.popular && (
                     <div className="mb-4 rounded-full bg-primary/10 px-3 py-1 text-sm font-medium text-primary w-fit mx-auto">
