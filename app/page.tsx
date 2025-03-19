@@ -16,7 +16,7 @@ export default function Home() {
             <Link href="#features" className="text-sm font-medium hover:text-primary">
               Features
             </Link>
-            <Link href="#showcase" className="text-sm font-medium hover:text-primary">
+            <Link href="/showcase" className="text-sm font-medium hover:text-primary">
               Showcase
             </Link>
             <Link href="#pricing" className="text-sm font-medium hover:text-primary">
@@ -25,7 +25,7 @@ export default function Home() {
             <Link href="#testimonials" className="text-sm font-medium hover:text-primary">
               Testimonials
             </Link>
-            <Link href="#contact" className="text-sm font-medium hover:text-primary">
+            <Link href="/contact" className="text-sm font-medium hover:text-primary">
               Contact
             </Link>
           </nav>
