@@ -83,6 +83,13 @@ export function Header() {
 
                 {/* Contact Button */}
                 <div className="hidden md:flex items-center gap-4">
+                    <Button
+                        size="sm"
+                        className="w-full text-theme-blue bg-white border border-theme-blue hover:bg-theme-blue/10"
+                        asChild
+                    >
+                        <Link href="/contact">+1 (647) 633-6042 </Link>
+                    </Button>
                     <Button size="sm" className="bg-theme-blue hover:bg-theme-blue/90" asChild>
                         <Link href="/contact">Contact Us</Link>
                     </Button>
@@ -94,14 +101,22 @@ export function Header() {
                 <div className="fixed inset-0 top-16 bg-white md:hidden z-20">
                     <div className="flex bg-white flex-col p-4 space-y-2">
                         <NavLinks />
-                        <div className="pt-4">
+                        <div className="pt-4 gap-4 flex flex-col">
                             <Button
                                 size="sm"
-                                className="w-full bg-theme-blue hover:bg-theme-blue/90"
+                                className="w-full text-theme-blue bg-white border border-theme-blue hover:bg-theme-blue/10"
+                                asChild
+                            >
+                                <Link href="/contact">+1 (647) 633-6042 </Link>
+                            </Button>
+                            <Button
+                                size="sm"
+                                className="w-full  bg-theme-blue hover:bg-theme-blue/90"
                                 asChild
                             >
                                 <Link href="/contact">Contact Us</Link>
                             </Button>
+
                         </div>
                     </div>
                 </div>
