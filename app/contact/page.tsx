@@ -12,9 +12,24 @@ import { Checkbox } from "@/components/ui/checkbox"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { SmileIcon as Tooth, CheckCircle, Phone, Mail, MapPin } from "lucide-react"
 import { toast } from "@/hooks/use-toast"
+import { Header } from "../header"
 
 export default function ContactPage() {
-  const [formState, setFormState] = useState({
+  const [formState, setFormState] = useState<{
+    name: string;
+    email: string;
+    phone: string;
+    clinicName: string;
+    website: string;
+    subject: string;
+    message: string;
+    budget: string;
+    services: string[];
+    preferredContact: string;
+    timeframe: string;
+    isSubmitting: boolean;
+    isSubmitted: boolean;
+  }>({
     name: "",
     email: "",
     phone: "",
@@ -30,43 +45,71 @@ export default function ContactPage() {
     isSubmitted: false,
   })
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault()
     setFormState((prev) => ({ ...prev, isSubmitting: true }))
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500))
+    try {
+      const response = await fetch('/api/send', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formState)
+      })
 
-    // Show success toast
-    toast({
-      title: "Message Sent!",
-      description: "We've received your message and will contact you shortly.",
-    })
+      const result = await response.json()
 
-    setFormState((prev) => ({
-      ...prev,
-      isSubmitting: false,
-      isSubmitted: true,
-      name: "",
-      email: "",
-      phone: "",
-      clinicName: "",
-      website: "",
-      subject: "",
-      message: "",
-      budget: "",
-      services: [],
-      preferredContact: "email",
-      timeframe: "",
-    }))
+      if (result.success) {
+        // Show success toast
+        toast({
+          title: "Message Sent!",
+          description: "We've received your message and will contact you shortly.",
+        })
+
+        // Reset form and show submitted state
+        setFormState((prev) => ({
+          ...prev,
+          isSubmitting: false,
+          isSubmitted: true,
+          name: "",
+          email: "",
+          phone: "",
+          clinicName: "",
+          website: "",
+          subject: "",
+          message: "",
+          budget: "",
+          services: [],
+          preferredContact: "email",
+          timeframe: "",
+        }))
+      } else {
+        // Handle error
+        toast({
+          title: "Error",
+          description: "Failed to send message. Please try again.",
+          variant: "destructive"
+        })
+        setFormState((prev) => ({ ...prev, isSubmitting: false }))
+      }
+    } catch (error) {
+      console.error('Submission error:', error)
+      toast({
+        title: "Error",
+        description: "An unexpected error occurred. Please try again.",
+        variant: "destructive"
+      })
+      setFormState((prev) => ({ ...prev, isSubmitting: false }))
+    }
   }
 
-  const handleChange = (e) => {
+  const handleChange = (e: { target: { name: any; value: any } }) => {
     const { name, value } = e.target
     setFormState((prev) => ({ ...prev, [name]: value }))
   }
 
-  const handleServiceToggle = (service) => {
+  const handleServiceToggle = (service: string) => {
     setFormState((prev) => {
       const services = prev.services.includes(service)
         ? prev.services.filter((s) => s !== service)
@@ -75,44 +118,13 @@ export default function ContactPage() {
     })
   }
 
-  const handleSelectChange = (name, value) => {
+  const handleSelectChange = (name: string, value: string) => {
     setFormState((prev) => ({ ...prev, [name]: value }))
   }
 
   return (
     <div className="flex min-h-screen flex-col">
-      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-16 items-center justify-between">
-          <div className="flex items-center gap-2">
-            <Link href="/" className="flex items-center gap-2">
-              <Tooth className="h-6 w-6 text-primary" />
-              <span className="text-xl font-bold">MedicBuilds</span>
-            </Link>
-          </div>
-          <nav className="hidden md:flex items-center gap-6">
-            <Link href="/#features" className="text-sm font-medium hover:text-theme-blue">
-              Features
-            </Link>
-            <Link href="/showcase" className="text-sm font-medium hover:text-theme-blue">
-              Showcase
-            </Link>
-            <Link href="/pricing" className="text-sm font-medium hover:text-theme-blue">
-              Pricing
-            </Link>
-            <Link href="/case-studies" className="text-sm font-medium hover:text-theme-blue">
-              Case Studies
-            </Link>
-            <Link href="/contact" className="text-sm font-medium text-primary">
-              Contact
-            </Link>
-          </nav>
-          <div className="flex items-center gap-4">
-            <Button size="sm" className="bg-theme-blue hover:bg-theme-blue/90" asChild>
-              <Link href="/contact">Contact Us</Link>
-            </Button>
-          </div>
-        </div>
-      </header>
+      <Header />
       <main className="flex-1">
         {/* Hero Section */}
         <section className="w-full py-12 md:py-24 bg-muted/50">
@@ -455,4 +467,3 @@ export default function ContactPage() {
     </div>
   )
 }
-

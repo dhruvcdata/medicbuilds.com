@@ -15,169 +15,126 @@ import {
   Users,
 } from "lucide-react"
 import { WebsiteShowcaseGrid, type Website } from "@/components/website-showcase-grid"
+import { Header } from "../header"
 
 // Sample website data for the showcase grid
-const templateShowcases: Website[] = [
+const templateShowcases = [
   {
     id: "t1",
     title: "Modern Medical",
-    url: "https://templates.hibootstrap.com/grin/default/index-11.html",
+    url: "https://www.free-css.com/free-css-templates/page287/mediplus-lite",
     description: "A clean, modern template for medical clinics with online booking and patient portal integration.",
     tags: ["General Practice", "Online Booking"],
-    category: "Template",
-    imageUrl: "./placeholder.svg",
+    category: "ortho",
+    imageUrl: "./t.jpg",
   },
   {
     id: "t2",
     title: "Specialist Care",
-    url: "https://templates.hibootstrap.com/grin/default/index-12.html",
+    url: "https://www.free-css.com/free-css-templates/page288/klinik",
     description: "Designed for medical specialists with detailed service pages and before/after galleries.",
     tags: ["Specialists", "Before/After"],
     category: "Template",
-    imageUrl: "./placeholder.svg",
-
+    imageUrl: "./t.jpg",
   },
   {
     id: "t3",
     title: "Pediatric Health",
-    url: "https://templates.hibootstrap.com/grin/default/index.html",
+    url: "https://www.free-css.com/free-css-templates/page289/mico",
     description: "Child-friendly medical website template with interactive elements and educational resources.",
     tags: ["Pediatrics", "Interactive"],
     category: "Template",
-    imageUrl: "./placeholder.svg",
-
+    imageUrl: "./t.jpg",
   },
   {
     id: "t4",
     title: "Wellness Center",
-    url: "https://templates.hibootstrap.com/grin/default/index-10.html",
+    url: "https://www.free-css.com/free-css-templates/page290/medic-care",
     description: "Holistic health and wellness template with appointment booking and practitioner profiles.",
     tags: ["Wellness", "Holistic"],
     category: "Template",
-    imageUrl: "./placeholder.svg",
-
+    imageUrl: "./t.jpg",
   },
   {
     id: "t5",
     title: "Surgical Practice",
-    url: "https://templates.hibootstrap.com/grin/default/index-2.html",
+    url: "https://www.free-css.com/free-css-templates/page291/dentcare",
     description: "Professional template for surgical practices with procedure information and patient resources.",
     tags: ["Surgery", "Educational"],
     category: "Template",
-    imageUrl: "./placeholder.svg",
-
+    imageUrl: "./t.jpg",
   },
   {
     id: "t6",
     title: "Mental Health",
-    url: "https://themetechmount.com/html/zenista/index.html",
+    url: "https://www.free-css.com/free-css-templates/page292/newlife",
     description: "Calming, accessible template for mental health professionals with resources and appointment booking.",
     tags: ["Mental Health", "Resources"],
     category: "Template",
-    imageUrl: "./placeholder.svg",
-
+    imageUrl: "./t.jpg",
   },
+];
 
-]
-
-const clientShowcases: Website[] = [
+const clientShowcases = [
   {
     id: "c1",
-    title: "Family Practice Clinic",
-    url: "https://preview.themeforest.net/item/prohealth-medical-and-healthcare-nextjs-template/full_screen_preview/50745875?_ga=2.267050126.1633410612.1742419465-634426705.1741800722",
-    description: "Multi-provider family practice with online scheduling and patient resources.",
+    title: "Family Practice Center, PC",
+    url: "https://www.fpcdoctors.com/",
+    description: "Multi-provider family practice offering comprehensive healthcare services across Central Pennsylvania.",
     tags: ["Family Medicine", "Multi-Provider"],
     category: "Client",
-    imageUrl: "./placeholder.svg",
-
+    imageUrl: "./t.jpg",
   },
   {
     id: "c2",
-    title: "Dental Specialists Group",
-    url: "https://templates.hibootstrap.com/grin/default/index-4.html",
-    description: "Specialized dental practice with multiple locations and comprehensive service information.",
+    title: "The Dental Specialists",
+    url: "https://www.thedentalspecialists.com/",
+    description: "Comprehensive dental services with multiple locations across Minnesota, offering specialized care.",
     tags: ["Dental", "Multi-Location"],
     category: "Client",
-    imageUrl: "./placeholder.svg",
-
+    imageUrl: "./t.jpg",
   },
   {
     id: "c3",
-    title: "Veterinary Hospital",
-    url: "https://quadcycle.com",
-    description: "Full-service veterinary hospital with emergency services and pet owner resources.",
-    tags: ["Veterinary", "Emergency Care"],
+    title: "Family Doctor Clinic",
+    url: "https://familydoctorclinic.com/",
+    description: "Full-service family healthcare provider with on-call services and same-day appointments in Southeast Louisiana.",
+    tags: ["Family Medicine", "Emergency Care"],
     category: "Client",
-    imageUrl: "./placeholder.svg",
-
+    imageUrl: "./t.jpg",
   },
   {
     id: "c4",
     title: "Dermatology Clinic",
-    url: "http://preview.themeforest.net/item/meditek-health-medical-html-template/full_screen_preview/54786178?_ga=2.267050126.1633410612.1742419465-634426705.1741800722",
-    description: "Dermatology practice with service galleries and patient before/after results.",
+    url: "https://www.dermatologyclinic.com/",
+    description: "Specialized dermatology services offering comprehensive skin care treatments and patient education.",
     tags: ["Dermatology", "Galleries"],
     category: "Client",
-    imageUrl: "./placeholder.svg",
-
+    imageUrl: "./t.jpg",
   },
   {
     id: "c5",
-    title: "Physical Therapy Center",
-    url: "https://templates.envytheme.com/goldmedi/default/index.html",
-    description: "Physical therapy practice with treatment information and exercise resources.",
-    tags: ["Physical Therapy", "Resources"],
+    title: "Magnolia Family Medicine",
+    url: "https://www.mydocmd.com/",
+    description: "Comprehensive family medicine practice open 7 days a week, serving patients of all ages in Texas.",
+    tags: ["Family Medicine", "Resources"],
     category: "Client",
-    imageUrl: "./placeholder.svg",
-
+    imageUrl: "./t.jpg",
   },
   {
     id: "c6",
     title: "Cardiology Practice",
-    url: "https://preview.themeforest.net/item/medical-dental-healthcare-website-html-template-mindmed/full_screen_preview/53337047?_ga=2.267050126.1633410612.1742419465-634426705.1741800722",
-    description: "Cardiology specialists with patient education and appointment scheduling.",
+    url: "https://www.cardiologypractice.com/",
+    description: "Specialized cardiology services providing patient education and advanced cardiac care.",
     tags: ["Cardiology", "Education"],
     category: "Client",
-    imageUrl: "./placeholder.svg",
-
+    imageUrl: "./t.jpg",
   },
-]
-
+];
 export default function ShowcasePage() {
   return (
     <div className="flex min-h-screen flex-col">
-      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-16 items-center justify-between">
-          <div className="flex items-center gap-2">
-            <Link href="/" className="flex items-center gap-2">
-              <MedicalIcon className="h-6 w-6 text-theme-blue" />
-              <span className="text-xl font-bold">MedicBuilds</span>
-            </Link>
-          </div>
-          <nav className="hidden md:flex items-center gap-6">
-            <Link href="/#features" className="text-sm font-medium hover:text-theme-blue">
-              Features
-            </Link>
-            <Link href="/showcase" className="text-sm font-medium text-theme-blue">
-              Showcase
-            </Link>
-            <Link href="/pricing" className="text-sm font-medium hover:text-theme-blue">
-              Pricing
-            </Link>
-            <Link href="/case-studies" className="text-sm font-medium hover:text-theme-blue">
-              Case Studies
-            </Link>
-            <Link href="/contact" className="text-sm font-medium hover:text-theme-blue">
-              Contact
-            </Link>
-          </nav>
-          <div className="flex items-center gap-4">
-            <Button size="sm" className="bg-theme-blue hover:bg-theme-blue/90" asChild>
-              <Link href="/contact">Contact Us</Link>
-            </Button>
-          </div>
-        </div>
-      </header>
+      <Header />
       <main className="flex-1">
         {/* Hero Section */}
         <section className="w-full py-12 md:py-24 bg-gradient-to-br from-theme-blue to-theme-purple text-white relative overflow-hidden">
@@ -309,29 +266,30 @@ export default function ShowcasePage() {
                   <ul className="space-y-2 mb-6">
                     <li className="flex items-center gap-2">
                       <CheckCircle className="h-5 w-5 text-theme-blue" />
-                      <span>Integrated online booking system with provider selection</span>
+                      <span>Custom healthcare website design with modern UI/UX</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <CheckCircle className="h-5 w-5 text-theme-blue" />
-                      <span>Mobile-optimized patient experience with easy navigation</span>
+                      <span>SEO optimization to improve search rankings</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <CheckCircle className="h-5 w-5 text-theme-blue" />
-                      <span>Provider profiles with credentials and availability</span>
+                      <span>Professional facility and staff photoshoots</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <CheckCircle className="h-5 w-5 text-theme-blue" />
-                      <span>Patient portal integration for secure communication</span>
+                      <span>Mobile-friendly and fast-loading websites</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <CheckCircle className="h-5 w-5 text-theme-blue" />
-                      <span>Location-specific content and directions</span>
+                      <span>Clear service pages with engaging content</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <CheckCircle className="h-5 w-5 text-theme-blue" />
-                      <span>Insurance verification tool for patients</span>
+                      <span>Secure and HIPAA-compliant website setup</span>
                     </li>
                   </ul>
+
                   <div className="flex flex-col gap-4 sm:flex-row">
                     <Button className="w-fit bg-theme-blue hover:bg-theme-blue/90">View Live Website</Button>
                     <Button
@@ -392,27 +350,27 @@ export default function ShowcasePage() {
                   <div className="rounded-full bg-theme-blue/10 p-3 w-fit">
                     <Clipboard className="h-6 w-6 text-theme-blue" />
                   </div>
-                  <h3 className="text-xl font-bold">Appointment Scheduling</h3>
+                  <h3 className="text-xl font-bold">Custom Website Development</h3>
                   <p className="text-muted-foreground">
-                    Integrated online booking systems that sync with your practice management software, allowing
-                    patients to book appointments 24/7.
+                    High-performance websites tailored for healthcare professionals, optimized for speed, security, and user engagement.
                   </p>
                   <ul className="space-y-2 mt-2">
                     <li className="flex items-start gap-2">
                       <CheckCircle className="h-4 w-4 text-theme-blue mt-0.5" />
-                      <span className="text-sm">Provider selection by specialty</span>
+                      <span className="text-sm">Fast-loading, mobile-responsive design</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle className="h-4 w-4 text-theme-blue mt-0.5" />
-                      <span className="text-sm">Real-time availability display</span>
+                      <span className="text-sm">Clean and intuitive navigation</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle className="h-4 w-4 text-theme-blue mt-0.5" />
-                      <span className="text-sm">Automated reminders and confirmations</span>
+                      <span className="text-sm">HIPAA-compliant security measures</span>
                     </li>
                   </ul>
                 </div>
               </div>
+
 
               {/* Feature 2 */}
               <div className="rounded-lg border bg-gradient-to-br from-theme-purple/5 to-transparent p-6 shadow-sm">
@@ -476,27 +434,27 @@ export default function ShowcasePage() {
                   <div className="rounded-full bg-theme-pink/10 p-3 w-fit">
                     <Activity className="h-6 w-6 text-theme-pink" />
                   </div>
-                  <h3 className="text-xl font-bold">Patient Portal Integration</h3>
+                  <h3 className="text-xl font-bold">SEO & Performance Optimization</h3>
                   <p className="text-muted-foreground">
-                    Seamless integration with your existing patient portal system, allowing for secure communication and
-                    document sharing.
+                    Get found by more patients with strategic SEO, fast website speeds, and content optimized for search engines.
                   </p>
                   <ul className="space-y-2 mt-2">
                     <li className="flex items-start gap-2">
                       <CheckCircle className="h-4 w-4 text-theme-pink mt-0.5" />
-                      <span className="text-sm">Secure login and authentication</span>
+                      <span className="text-sm">Keyword-optimized content for ranking</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle className="h-4 w-4 text-theme-pink mt-0.5" />
-                      <span className="text-sm">Mobile-friendly access to records</span>
+                      <span className="text-sm">Page speed and mobile performance tuning</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle className="h-4 w-4 text-theme-pink mt-0.5" />
-                      <span className="text-sm">Prescription refill requests</span>
+                      <span className="text-sm">Local SEO strategies for clinics</span>
                     </li>
                   </ul>
                 </div>
               </div>
+
 
               {/* Feature 5 */}
               <div className="rounded-lg border bg-gradient-to-br from-theme-yellow/5 to-transparent p-6 shadow-sm">
@@ -504,23 +462,22 @@ export default function ShowcasePage() {
                   <div className="rounded-full bg-theme-yellow/10 p-3 w-fit">
                     <Stethoscope className="h-6 w-6 text-theme-yellow" />
                   </div>
-                  <h3 className="text-xl font-bold">Telemedicine Support</h3>
+                  <h3 className="text-xl font-bold">UI/UX Design & Branding</h3>
                   <p className="text-muted-foreground">
-                    Integration with virtual care platforms that enable secure video consultations and remote patient
-                    monitoring.
+                    Crafting visually appealing and easy-to-navigate healthcare websites that enhance user experience and brand identity.
                   </p>
                   <ul className="space-y-2 mt-2">
                     <li className="flex items-start gap-2">
                       <CheckCircle className="h-4 w-4 text-theme-yellow mt-0.5" />
-                      <span className="text-sm">HIPAA-compliant video integration</span>
+                      <span className="text-sm">User-friendly interface with accessibility focus</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle className="h-4 w-4 text-theme-yellow mt-0.5" />
-                      <span className="text-sm">Virtual waiting room functionality</span>
+                      <span className="text-sm">Custom branding and color schemes</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle className="h-4 w-4 text-theme-yellow mt-0.5" />
-                      <span className="text-sm">Pre-visit documentation collection</span>
+                      <span className="text-sm">Conversion-focused layouts for patient engagement</span>
                     </li>
                   </ul>
                 </div>
@@ -597,7 +554,7 @@ export default function ShowcasePage() {
                     Contact Us Now <ArrowRight className="h-4 w-4" />
                   </Link>
                 </Button>
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10" asChild>
+                <Button size="lg" variant="outline" className="border-white text-black hover:bg-white/90" asChild>
                   <Link href="/case-studies">View Case Studies</Link>
                 </Button>
               </div>
@@ -605,20 +562,32 @@ export default function ShowcasePage() {
           </div>
         </section>
       </main>
-      <footer className="w-full border-t py-6 md:py-0 bg-gray-50">
+      <footer className="w-full bg-gradient-to-r from-theme-blue/10 to-theme-purple/10 border-t py-6 md:py-0">
         <div className="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
-          <div className="flex items-center gap-2">
-            <MedicalIcon className="h-5 w-5 text-theme-blue" />
-            <p className="text-sm font-medium">© 2025 MedicBuilds. All rights reserved.</p>
+          <div className="flex items-center gap-4">
+            {/* <Tooth className="h-6 w-6 text-theme-blue" /> */}
+            <div className="flex flex-col">
+              <p className="text-sm font-bold text-theme-blue">MedicBuilds</p>
+              <p className="text-xs text-muted-foreground">© 2025 All rights reserved</p>
+            </div>
           </div>
-          <div className="flex gap-4">
-            <Link href="#" className="text-sm font-medium hover:text-theme-blue">
+          <div className="flex items-center gap-6">
+            <Link
+              href="#"
+              className="text-sm font-medium text-theme-purple hover:text-theme-purple/80 transition-colors duration-300"
+            >
               Privacy Policy
             </Link>
-            <Link href="#" className="text-sm font-medium hover:text-theme-blue">
+            <Link
+              href="#"
+              className="text-sm font-medium text-theme-purple hover:text-theme-purple/80 transition-colors duration-300"
+            >
               Terms of Service
             </Link>
-            <Link href="/contact" className="text-sm font-medium hover:text-theme-blue">
+            <Link
+              href="/contact"
+              className="px-4 py-2 bg-theme-blue text-white rounded-full text-sm font-medium hover:bg-theme-blue/90 transition-all duration-300 shadow-md hover:shadow-lg"
+            >
               Contact Us
             </Link>
           </div>

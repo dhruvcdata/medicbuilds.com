@@ -12,42 +12,12 @@ import {
   Zap,
   Globe,
 } from "lucide-react"
+import { Header } from "../header"
 
 export default function CaseStudiesPage() {
   return (
     <div className="flex min-h-screen flex-col">
-      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-16 items-center justify-between">
-          <div className="flex items-center gap-2">
-            <Link href="/" className="flex items-center gap-2">
-              <MedicalIcon className="h-6 w-6 text-theme-blue" />
-              <span className="text-xl font-bold">MedicBuilds</span>
-            </Link>
-          </div>
-          <nav className="hidden md:flex items-center gap-6">
-            <Link href="/#features" className="text-sm font-medium hover:text-theme-blue">
-              Features
-            </Link>
-            <Link href="/showcase" className="text-sm font-medium hover:text-theme-blue">
-              Showcase
-            </Link>
-            <Link href="/pricing" className="text-sm font-medium hover:text-theme-blue">
-              Pricing
-            </Link>
-            <Link href="/case-studies" className="text-sm font-medium text-theme-blue">
-              Case Studies
-            </Link>
-            <Link href="/contact" className="text-sm font-medium hover:text-theme-blue">
-              Contact
-            </Link>
-          </nav>
-          <div className="flex items-center gap-4">
-            <Button size="sm" className="bg-theme-blue hover:bg-theme-blue/90" asChild>
-              <Link href="/contact">Contact Us</Link>
-            </Button>
-          </div>
-        </div>
-      </header>
+      <Header />
       <main className="flex-1">
         {/* Hero Section */}
         <section className="w-full py-12 md:py-24 bg-gradient-to-br from-theme-blue to-theme-purple text-white relative overflow-hidden">
@@ -453,7 +423,7 @@ export default function CaseStudiesPage() {
                     Schedule a Consultation <ArrowRight className="h-4 w-4" />
                   </Link>
                 </Button>
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10" asChild>
+                <Button size="lg" variant="outline" className="border-white text-black hover:bg-white/90" asChild>
                   <Link href="/showcase">View Our Portfolio</Link>
                 </Button>
               </div>
@@ -461,20 +431,32 @@ export default function CaseStudiesPage() {
           </div>
         </section>
       </main>
-      <footer className="w-full border-t py-6 md:py-0 bg-gray-50">
+      <footer className="w-full bg-gradient-to-r from-theme-blue/10 to-theme-purple/10 border-t py-6 md:py-0">
         <div className="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
-          <div className="flex items-center gap-2">
-            <MedicalIcon className="h-5 w-5 text-theme-blue" />
-            <p className="text-sm font-medium">© 2025 MedicBuilds. All rights reserved.</p>
+          <div className="flex items-center gap-4">
+            {/* <Tooth className="h-6 w-6 text-theme-blue" /> */}
+            <div className="flex flex-col">
+              <p className="text-sm font-bold text-theme-blue">MedicBuilds</p>
+              <p className="text-xs text-muted-foreground">© 2025 All rights reserved</p>
+            </div>
           </div>
-          <div className="flex gap-4">
-            <Link href="#" className="text-sm font-medium hover:text-theme-blue">
+          <div className="flex items-center gap-6">
+            <Link
+              href="#"
+              className="text-sm font-medium text-theme-purple hover:text-theme-purple/80 transition-colors duration-300"
+            >
               Privacy Policy
             </Link>
-            <Link href="#" className="text-sm font-medium hover:text-theme-blue">
+            <Link
+              href="#"
+              className="text-sm font-medium text-theme-purple hover:text-theme-purple/80 transition-colors duration-300"
+            >
               Terms of Service
             </Link>
-            <Link href="/contact" className="text-sm font-medium hover:text-theme-blue">
+            <Link
+              href="/contact"
+              className="px-4 py-2 bg-theme-blue text-white rounded-full text-sm font-medium hover:bg-theme-blue/90 transition-all duration-300 shadow-md hover:shadow-lg"
+            >
               Contact Us
             </Link>
           </div>

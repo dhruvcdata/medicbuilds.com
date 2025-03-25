@@ -18,216 +18,159 @@ import {
   Brain,
 } from "lucide-react"
 import { WebsiteShowcaseGrid, type Website } from "@/components/website-showcase-grid"
+import { Header } from "./header"
 
 // Sample website data for the showcase grid
-const templateShowcases: Website[] = [
+const templateShowcases = [
   {
     id: "t1",
     title: "Modern Medical",
-    url: "https://templates.hibootstrap.com/grin/default/index-11.html",
-
+    url: "https://www.free-css.com/free-css-templates/page287/mediplus-lite",
     description: "A clean, modern template for medical clinics with online booking and patient portal integration.",
     tags: ["General Practice", "Online Booking"],
     category: "ortho",
     imageUrl: "./t.jpg",
-
   },
   {
     id: "t2",
     title: "Specialist Care",
-    url: "https://templates.hibootstrap.com/grin/default/index-11.html",
-
+    url: "https://www.free-css.com/free-css-templates/page288/klinik",
     description: "Designed for medical specialists with detailed service pages and before/after galleries.",
     tags: ["Specialists", "Before/After"],
     category: "Template",
     imageUrl: "./t.jpg",
-
   },
   {
     id: "t3",
     title: "Pediatric Health",
-    url: "https://templates.hibootstrap.com/grin/default/index-11.html",
-
+    url: "https://www.free-css.com/free-css-templates/page289/mico",
     description: "Child-friendly medical website template with interactive elements and educational resources.",
     tags: ["Pediatrics", "Interactive"],
     category: "Template",
-    imageUrl: "./placeholder.svg",
-
+    imageUrl: "./t.jpg",
   },
   {
     id: "t4",
     title: "Wellness Center",
-    url: "https://templates.hibootstrap.com/grin/default/index-11.html",
-
+    url: "https://www.free-css.com/free-css-templates/page290/medic-care",
     description: "Holistic health and wellness template with appointment booking and practitioner profiles.",
     tags: ["Wellness", "Holistic"],
     category: "Template",
-    imageUrl: "./placeholder.svg",
-
+    imageUrl: "./t.jpg",
   },
   {
     id: "t5",
     title: "Surgical Practice",
-    url: "https://templates.hibootstrap.com/grin/default/index-11.html",
-
+    url: "https://www.free-css.com/free-css-templates/page291/dentcare",
     description: "Professional template for surgical practices with procedure information and patient resources.",
     tags: ["Surgery", "Educational"],
     category: "Template",
-    imageUrl: "./placeholder.svg",
-
+    imageUrl: "./t.jpg",
   },
   {
     id: "t6",
     title: "Mental Health",
-    url: "https://templates.hibootstrap.com/grin/default/index-11.html",
-
+    url: "https://www.free-css.com/free-css-templates/page292/newlife",
     description: "Calming, accessible template for mental health professionals with resources and appointment booking.",
     tags: ["Mental Health", "Resources"],
     category: "Template",
-    imageUrl: "./placeholder.svg",
-
+    imageUrl: "./t.jpg",
   },
-]
+];
 
-const clientShowcases: Website[] = [
+const clientShowcases = [
   {
     id: "c1",
-    title: "Family Practice Clinic",
-    url: "https://templates.hibootstrap.com/grin/default/index-11.html",
-
-    description: "Multi-provider family practice with online scheduling and patient resources.",
+    title: "Family Practice Center, PC",
+    url: "https://www.fpcdoctors.com/",
+    description: "Multi-provider family practice offering comprehensive healthcare services across Central Pennsylvania.",
     tags: ["Family Medicine", "Multi-Provider"],
     category: "Client",
-    imageUrl: "./placeholder.svg",
-
+    imageUrl: "./t.jpg",
   },
   {
     id: "c2",
-    title: "Dental Specialists Group",
-    url: "https://templates.hibootstrap.com/grin/default/index-11.html",
-
-    description: "Specialized dental practice with multiple locations and comprehensive service information.",
+    title: "The Dental Specialists",
+    url: "https://www.thedentalspecialists.com/",
+    description: "Comprehensive dental services with multiple locations across Minnesota, offering specialized care.",
     tags: ["Dental", "Multi-Location"],
     category: "Client",
     imageUrl: "./t.jpg",
-
   },
   {
     id: "c3",
-    title: "Veterinary Hospital",
-    url: "https://templates.hibootstrap.com/grin/default/index-11.html",
-
-    description: "Full-service veterinary hospital with emergency services and pet owner resources.",
-    tags: ["Veterinary", "Emergency Care"],
+    title: "Family Doctor Clinic",
+    url: "https://familydoctorclinic.com/",
+    description: "Full-service family healthcare provider with on-call services and same-day appointments in Southeast Louisiana.",
+    tags: ["Family Medicine", "Emergency Care"],
     category: "Client",
-    imageUrl: "./placeholder.svg",
-
+    imageUrl: "./t.jpg",
   },
   {
     id: "c4",
     title: "Dermatology Clinic",
-    url: "https://templates.hibootstrap.com/grin/default/index-11.html",
-
-    description: "Dermatology practice with service galleries and patient before/after results.",
+    url: "https://www.dermatologyclinic.com/",
+    description: "Specialized dermatology services offering comprehensive skin care treatments and patient education.",
     tags: ["Dermatology", "Galleries"],
     category: "Client",
     imageUrl: "./t.jpg",
-
   },
   {
     id: "c5",
-    title: "Physical Therapy Center",
-    url: "https://templates.hibootstrap.com/grin/default/index-11.html",
-
-    description: "Physical therapy practice with treatment information and exercise resources.",
-    tags: ["Physical Therapy", "Resources"],
+    title: "Magnolia Family Medicine",
+    url: "https://www.mydocmd.com/",
+    description: "Comprehensive family medicine practice open 7 days a week, serving patients of all ages in Texas.",
+    tags: ["Family Medicine", "Resources"],
     category: "Client",
-    imageUrl: "./placeholder.svg",
-
+    imageUrl: "./t.jpg",
   },
   {
     id: "c6",
     title: "Cardiology Practice",
-    url: "https://templates.hibootstrap.com/grin/default/index-11.html",
-
-    description: "Cardiology specialists with patient education and appointment scheduling.",
+    url: "https://www.cardiologypractice.com/",
+    description: "Specialized cardiology services providing patient education and advanced cardiac care.",
     tags: ["Cardiology", "Education"],
     category: "Client",
-    imageUrl: "./placeholder.svg",
-
+    imageUrl: "./t.jpg",
   },
-]
+];
+
 
 const caseStudies: Website[] = [
   {
     id: "cs1",
-    title: "Multi-Location Medical Group",
-    url: "https://templates.hibootstrap.com/grin/default/index-11.html",
-
-    description: "Increased new patient appointments by 45% through location-specific SEO and streamlined booking.",
-    tags: ["Case Study", "Multi-Location"],
+    title: "Primary Health Network Website Redesign",
+    url: "https://www.oneupweb.com/case-studies/healthcare-website-redesign/",
+    description: "Revamped website led to enhanced user experience and marketing effectiveness for a multi-location healthcare provider.",
+    tags: ["Case Study", "Website Redesign"],
     category: "Case Study",
-    imageUrl: "./placeholder.svg",
-
+    imageUrl: "./t.jpg",
   },
   {
     id: "cs2",
-    title: "Telemedicine Integration",
-    url: "https://templates.hibootstrap.com/grin/default/index-11.html",
-
-    description: "Implemented virtual care platform that reduced no-shows by 35% and expanded patient reach.",
-    tags: ["Case Study", "Telemedicine"],
+    title: "OT&P Healthcare Website Transformation",
+    url: "https://www.chooseoxygen.com/case-studies/website-redesign-helps-medical-practise-achieve-exponential-growth-in-online-bookings",
+    description: "Website overhaul resulted in exponential growth in online bookings and improved patient engagement for a Hong Kong-based medical practice.",
+    tags: ["Case Study", "Online Bookings"],
     category: "Case Study",
-    imageUrl: "./placeholder.svg",
-
+    imageUrl: "./t.jpg",
   },
   {
     id: "cs3",
-    title: "Specialty Practice Rebrand",
-    url: "https://templates.hibootstrap.com/grin/default/index-11.html",
-
-    description:
-      "Complete digital rebrand resulting in 60% increase in high-value procedures and improved patient perception.",
-    tags: ["Case Study", "Branding"],
+    title: "Logansport Memorial Hospital Digital Revamp",
+    url: "https://blog.tbhcreative.com/case-study-web-redesign-helps-hospital/",
+    description: "Redesign improved patient conversion rates and user engagement for a community hospital.",
+    tags: ["Case Study", "Patient Conversion"],
     category: "Case Study",
-    imageUrl: "./placeholder.svg",
-
+    imageUrl: "./t.jpg",
   },
-]
+];
+
 
 export default function Home() {
   return (
     <div className="flex min-h-screen flex-col">
-      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-16 items-center justify-between">
-          <div className="flex items-center gap-2">
-            <MedicalIcon className="h-6 w-6 text-theme-blue" />
-            <span className="text-xl font-bold">MedicBuilds</span>
-          </div>
-          <nav className="hidden md:flex items-center gap-6">
-            <Link href="#features" className="text-sm font-medium hover:text-theme-blue">
-              Features
-            </Link>
-            <Link href="/showcase" className="text-sm font-medium hover:text-theme-blue">
-              Showcase
-            </Link>
-            <Link href="/pricing" className="text-sm font-medium hover:text-theme-blue">
-              Pricing
-            </Link>
-            <Link href="/case-studies" className="text-sm font-medium hover:text-theme-blue">
-              Case Studies
-            </Link>
-            <Link href="/contact" className="text-sm font-medium hover:text-theme-blue">
-              Contact
-            </Link>
-          </nav>
-          <div className="flex items-center gap-4">
-            <Button size="sm" className="bg-theme-blue hover:bg-theme-blue/90" asChild>
-              <Link href="/contact">Contact Us</Link>
-            </Button>
-          </div>
-        </div>
-      </header>
+      <Header />
       <main className="flex-1">
         {/* Hero Section */}
         <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 relative overflow-hidden">
@@ -505,7 +448,7 @@ export default function Home() {
         </section>
 
         {/* Process Section */}
-        <section className="w-full py-16 md:py-28 lg:py-32 bg-gradient-to-br from-theme-blue via-theme-purple to-theme-indigo text-white relative overflow-hidden">
+        <section className="w-full py-16 md:py-28 lg:py-32 bg-theme-blue  text-white relative overflow-hidden">
           <div className="absolute inset-0 opacity-15">
             <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" className="rotate-12">
               <defs>
@@ -544,15 +487,15 @@ export default function Home() {
                   <div className="relative flex flex-col items-center space-y-6 rounded-xl bg-white/5 backdrop-blur-lg p-8 border-2 border-white/10 transform transition-all hover:scale-[1.02] hover:border-theme-teal/50">
                     <div className="flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-theme-teal to-theme-blue shadow-lg">
                       <span className="text-3xl font-bold text-white">1</span>
-                      <svg className="absolute -right-3 -top-3 w-8 h-8 text-theme-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="absolute -right-3 -top-3 w-8 h-8 text-theme-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
                       </svg>
                     </div>
-                    <h3 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-theme-teal to-theme-blue">
+                    <h3 className="text-2xl font-bold bg-clip-text text-transparent bg-white">
                       Discovery & Strategy
                     </h3>
                     <div className="space-y-3 text-center text-white/85">
-                      <ul className="space-y-2 text-left list-disc list-inside marker:text-theme-teal">
+                      <ul className="space-y-2 text-left list-disc list-inside marker:text-theme-white">
                         <li>Practice needs analysis</li>
                         <li>Patient journey mapping</li>
                         <li>HIPAA compliance audit</li>
@@ -571,15 +514,15 @@ export default function Home() {
                   <div className="relative flex flex-col items-center space-y-6 rounded-xl bg-white/5 backdrop-blur-lg p-8 border-2 border-white/10 transform transition-all hover:scale-[1.02] hover:border-theme-purple/50">
                     <div className="flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-theme-purple to-theme-indigo shadow-lg">
                       <span className="text-3xl font-bold text-white">2</span>
-                      <svg className="absolute -right-3 -top-3 w-8 h-8 text-theme-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="absolute -right-3 -top-3 w-8 h-8 text-theme-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                       </svg>
                     </div>
-                    <h3 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-theme-purple to-theme-indigo">
+                    <h3 className="text-2xl font-bold bg-clip-text text-transparent bg-white">
                       Medical-Optimized Design
                     </h3>
                     <div className="space-y-3 text-center text-white/85">
-                      <ul className="space-y-2 text-left list-disc list-inside marker:text-theme-purple">
+                      <ul className="space-y-2 text-left list-disc list-inside marker:text-theme-white">
                         <li>Patient-first UI/UX design</li>
                         <li>Telemedicine integration</li>
                         <li>Appointment scheduling system</li>
@@ -598,15 +541,15 @@ export default function Home() {
                   <div className="relative flex flex-col items-center space-y-6 rounded-xl bg-white/5 backdrop-blur-lg p-8 border-2 border-white/10 transform transition-all hover:scale-[1.02] hover:border-theme-blue/50">
                     <div className="flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-theme-blue to-theme-teal shadow-lg">
                       <span className="text-3xl font-bold text-white">3</span>
-                      <svg className="absolute -right-3 -top-3 w-8 h-8 text-theme-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="absolute -right-3 -top-3 w-8 h-8 text-theme-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                       </svg>
                     </div>
-                    <h3 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-theme-blue to-theme-teal">
+                    <h3 className="text-2xl font-bold bg-clip-text text-transparent bg-white">
                       Secure Launch & Growth
                     </h3>
                     <div className="space-y-3 text-center text-white/85">
-                      <ul className="space-y-2 text-left list-disc list-inside marker:text-theme-blue">
+                      <ul className="space-y-2 text-left list-disc list-inside marker:text-theme-white">
                         <li>SSL & HIPAA compliance checks</li>
                         <li>Staff training & documentation</li>
                         <li>Ongoing performance monitoring</li>
@@ -778,7 +721,7 @@ export default function Home() {
         {/* CTA Section */}
         <section
           id="contact"
-          className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-r from-theme-blue to-theme-purple text-white"
+          className="w-full py-12 md:py-24 lg:py-32 bg-theme-blue  text-white"
         >
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -796,7 +739,7 @@ export default function Home() {
                     Schedule a Consultation <ArrowRight className="h-4 w-4" />
                   </Link>
                 </Button>
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10" asChild>
+                <Button size="lg" variant="outline" className="border-white text-black hover:bg-white/90" asChild>
                   <Link href="/showcase">View Our Portfolio</Link>
                 </Button>
               </div>

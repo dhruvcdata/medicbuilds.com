@@ -1,42 +1,12 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { HospitalIcon as MedicalIcon, CheckCircle, ArrowRight, HelpCircle } from "lucide-react"
+import { Header } from "../header"
 
 export default function PricingPage() {
   return (
     <div className="flex min-h-screen flex-col">
-      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-16 items-center justify-between">
-          <div className="flex items-center gap-2">
-            <Link href="/" className="flex items-center gap-2">
-              <MedicalIcon className="h-6 w-6 text-theme-blue" />
-              <span className="text-xl font-bold">MedicBuilds</span>
-            </Link>
-          </div>
-          <nav className="hidden md:flex items-center gap-6">
-            <Link href="/#features" className="text-sm font-medium hover:text-theme-blue">
-              Features
-            </Link>
-            <Link href="/showcase" className="text-sm font-medium hover:text-theme-blue">
-              Showcase
-            </Link>
-            <Link href="/pricing" className="text-sm font-medium text-theme-blue">
-              Pricing
-            </Link>
-            <Link href="/case-studies" className="text-sm font-medium hover:text-theme-blue">
-              Case Studies
-            </Link>
-            <Link href="/contact" className="text-sm font-medium hover:text-theme-blue">
-              Contact
-            </Link>
-          </nav>
-          <div className="flex items-center gap-4">
-            <Button size="sm" className="bg-theme-blue hover:bg-theme-blue/90" asChild>
-              <Link href="/contact">Contact Us</Link>
-            </Button>
-          </div>
-        </div>
-      </header>
+      <Header />
       <main className="flex-1">
         {/* Hero Section */}
         <section className="w-full py-12 md:py-24 bg-gradient-radial from-theme-blue/20 to-transparent">
@@ -265,11 +235,7 @@ export default function PricingPage() {
                     answer:
                       "Each medical practice has unique needs that affect project scope. We provide custom quotes based on your specific requirements to ensure you only pay for what you need.",
                   },
-                  {
-                    question: "Do you offer payment plans?",
-                    answer:
-                      "Yes, we offer flexible payment options including installment plans to help make your website investment more manageable.",
-                  },
+
                   {
                     question: "Are there any hidden fees?",
                     answer:
