@@ -25,16 +25,16 @@ const templateShowcases = [
   {
     id: "t1",
     title: "Modern Medical",
-    url: "https://www.free-css.com/free-css-templates/page287/mediplus-lite",
+    url: "https://medicate.peacefulqode.co.in/",
     description: "A clean, modern template for medical clinics with online booking and patient portal integration.",
     tags: ["General Practice", "Online Booking"],
-    category: "ortho",
+    category: "Template",
     imageUrl: "./t.jpg",
   },
   {
     id: "t2",
     title: "Specialist Care",
-    url: "https://www.free-css.com/free-css-templates/page288/klinik",
+    url: "https://medicate.peacefulqode.co.in/cardiology/",
     description: "Designed for medical specialists with detailed service pages and before/after galleries.",
     tags: ["Specialists", "Before/After"],
     category: "Template",
@@ -42,8 +42,8 @@ const templateShowcases = [
   },
   {
     id: "t3",
-    title: "Pediatric Health",
-    url: "https://www.free-css.com/free-css-templates/page289/mico",
+    title: "Optics",
+    url: "https://medicate.peacefulqode.co.in/surgery//",
     description: "Child-friendly medical website template with interactive elements and educational resources.",
     tags: ["Pediatrics", "Interactive"],
     category: "Template",
@@ -52,7 +52,7 @@ const templateShowcases = [
   {
     id: "t4",
     title: "Wellness Center",
-    url: "https://www.free-css.com/free-css-templates/page290/medic-care",
+    url: "https://preview.themeforest.net/item/saveo-inhome-care-agency-wp-theme/full_screen_preview/21205308?_ga=2.201712407.762406414.1742917173-634426705.1741800722",
     description: "Holistic health and wellness template with appointment booking and practitioner profiles.",
     tags: ["Wellness", "Holistic"],
     category: "Template",
@@ -61,7 +61,7 @@ const templateShowcases = [
   {
     id: "t5",
     title: "Surgical Practice",
-    url: "https://www.free-css.com/free-css-templates/page291/dentcare",
+    url: "https://medicate.peacefulqode.co.in/surgery/",
     description: "Professional template for surgical practices with procedure information and patient resources.",
     tags: ["Surgery", "Educational"],
     category: "Template",
@@ -70,7 +70,7 @@ const templateShowcases = [
   {
     id: "t6",
     title: "Mental Health",
-    url: "https://www.free-css.com/free-css-templates/page292/newlife",
+    url: "https://medicate.peacefulqode.co.in/psychiatrist/",
     description: "Calming, accessible template for mental health professionals with resources and appointment booking.",
     tags: ["Mental Health", "Resources"],
     category: "Template",
@@ -81,8 +81,8 @@ const templateShowcases = [
 const clientShowcases = [
   {
     id: "c1",
-    title: "Family Practice Center, PC",
-    url: "https://www.fpcdoctors.com/",
+    title: "Healing Hands Clinic",
+    url: "http://healinghorizons.us/",
     description: "Multi-provider family practice offering comprehensive healthcare services across Central Pennsylvania.",
     tags: ["Family Medicine", "Multi-Provider"],
     category: "Client",
@@ -90,57 +90,22 @@ const clientShowcases = [
   },
   {
     id: "c2",
-    title: "The Dental Specialists",
-    url: "https://www.thedentalspecialists.com/",
+    title: "The Pet Specialists",
+    url: "http://dranandspetsclinic.com/",
     description: "Comprehensive dental services with multiple locations across Minnesota, offering specialized care.",
     tags: ["Dental", "Multi-Location"],
     category: "Client",
     imageUrl: "./t.jpg",
   },
-  {
-    id: "c3",
-    title: "Family Doctor Clinic",
-    url: "https://familydoctorclinic.com/",
-    description: "Full-service family healthcare provider with on-call services and same-day appointments in Southeast Louisiana.",
-    tags: ["Family Medicine", "Emergency Care"],
-    category: "Client",
-    imageUrl: "./t.jpg",
-  },
-  {
-    id: "c4",
-    title: "Dermatology Clinic",
-    url: "https://www.dermatologyclinic.com/",
-    description: "Specialized dermatology services offering comprehensive skin care treatments and patient education.",
-    tags: ["Dermatology", "Galleries"],
-    category: "Client",
-    imageUrl: "./t.jpg",
-  },
-  {
-    id: "c5",
-    title: "Magnolia Family Medicine",
-    url: "https://www.mydocmd.com/",
-    description: "Comprehensive family medicine practice open 7 days a week, serving patients of all ages in Texas.",
-    tags: ["Family Medicine", "Resources"],
-    category: "Client",
-    imageUrl: "./t.jpg",
-  },
-  {
-    id: "c6",
-    title: "Cardiology Practice",
-    url: "https://www.cardiologypractice.com/",
-    description: "Specialized cardiology services providing patient education and advanced cardiac care.",
-    tags: ["Cardiology", "Education"],
-    category: "Client",
-    imageUrl: "./t.jpg",
-  },
+
 ];
 
 
 const caseStudies: Website[] = [
   {
     id: "cs1",
-    title: "Primary Health Network Website Redesign",
-    url: "https://www.oneupweb.com/case-studies/healthcare-website-redesign/",
+    title: "Amaha Health Network Website Redesign",
+    url: "https://www.amahahealth.com/?source=topnav&ispm=true",
     description: "Revamped website led to enhanced user experience and marketing effectiveness for a multi-location healthcare provider.",
     tags: ["Case Study", "Website Redesign"],
     category: "Case Study",
@@ -148,8 +113,8 @@ const caseStudies: Website[] = [
   },
   {
     id: "cs2",
-    title: "OT&P Healthcare Website Transformation",
-    url: "https://www.chooseoxygen.com/case-studies/website-redesign-helps-medical-practise-achieve-exponential-growth-in-online-bookings",
+    title: "Apollo Healthcare Website Transformation",
+    url: "https://www.apolloclinic.com/",
     description: "Website overhaul resulted in exponential growth in online bookings and improved patient engagement for a Hong Kong-based medical practice.",
     tags: ["Case Study", "Online Bookings"],
     category: "Case Study",

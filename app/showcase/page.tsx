@@ -22,16 +22,16 @@ const templateShowcases = [
   {
     id: "t1",
     title: "Modern Medical",
-    url: "https://www.free-css.com/free-css-templates/page287/mediplus-lite",
+    url: "https://medicate.peacefulqode.co.in/",
     description: "A clean, modern template for medical clinics with online booking and patient portal integration.",
     tags: ["General Practice", "Online Booking"],
-    category: "ortho",
+    category: "Template",
     imageUrl: "./t.jpg",
   },
   {
     id: "t2",
     title: "Specialist Care",
-    url: "https://www.free-css.com/free-css-templates/page288/klinik",
+    url: "https://medicate.peacefulqode.co.in/cardiology/",
     description: "Designed for medical specialists with detailed service pages and before/after galleries.",
     tags: ["Specialists", "Before/After"],
     category: "Template",
@@ -39,8 +39,8 @@ const templateShowcases = [
   },
   {
     id: "t3",
-    title: "Pediatric Health",
-    url: "https://www.free-css.com/free-css-templates/page289/mico",
+    title: "Optics",
+    url: "https://medicate.peacefulqode.co.in/surgery//",
     description: "Child-friendly medical website template with interactive elements and educational resources.",
     tags: ["Pediatrics", "Interactive"],
     category: "Template",
@@ -49,7 +49,7 @@ const templateShowcases = [
   {
     id: "t4",
     title: "Wellness Center",
-    url: "https://www.free-css.com/free-css-templates/page290/medic-care",
+    url: "https://preview.themeforest.net/item/saveo-inhome-care-agency-wp-theme/full_screen_preview/21205308?_ga=2.201712407.762406414.1742917173-634426705.1741800722",
     description: "Holistic health and wellness template with appointment booking and practitioner profiles.",
     tags: ["Wellness", "Holistic"],
     category: "Template",
@@ -58,7 +58,7 @@ const templateShowcases = [
   {
     id: "t5",
     title: "Surgical Practice",
-    url: "https://www.free-css.com/free-css-templates/page291/dentcare",
+    url: "https://medicate.peacefulqode.co.in/surgery/",
     description: "Professional template for surgical practices with procedure information and patient resources.",
     tags: ["Surgery", "Educational"],
     category: "Template",
@@ -67,7 +67,7 @@ const templateShowcases = [
   {
     id: "t6",
     title: "Mental Health",
-    url: "https://www.free-css.com/free-css-templates/page292/newlife",
+    url: "https://medicate.peacefulqode.co.in/psychiatrist/",
     description: "Calming, accessible template for mental health professionals with resources and appointment booking.",
     tags: ["Mental Health", "Resources"],
     category: "Template",
