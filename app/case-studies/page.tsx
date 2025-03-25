@@ -20,7 +20,7 @@ export default function CaseStudiesPage() {
       <Header />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="w-full py-12 md:py-24 bg-gradient-to-br from-theme-blue to-theme-purple text-white relative overflow-hidden">
+        <section className="w-full py-12 md:py-24 bg-theme-blue text-white relative overflow-hidden">
           <div className="absolute inset-0 opacity-10">
             <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
               <defs>
@@ -66,7 +66,7 @@ export default function CaseStudiesPage() {
                 <div className="grid md:grid-cols-2">
                   <div className="relative h-[300px] md:h-auto">
                     <Image
-                      src="/placeholder.svg?height=600&width=800&text=Medical+Group+Website"
+                      src="/newmic.png"
                       alt="Medical Group website showcase"
                       fill
                       className="object-cover"
@@ -184,9 +184,9 @@ export default function CaseStudiesPage() {
             <div className="grid gap-8 md:grid-cols-2">
               {/* Case Study 1 */}
               <div className="rounded-lg border bg-white shadow-sm overflow-hidden">
-                <div className="relative h-[200px]">
+                <div className="relative h-[500px]">
                   <Image
-                    src="/placeholder.svg?height=400&width=600&text=Telemedicine+Integration"
+                    src="/2.png"
                     alt="Telemedicine Integration"
                     fill
                     className="object-cover"
@@ -236,9 +236,9 @@ export default function CaseStudiesPage() {
 
               {/* Case Study 2 */}
               <div className="rounded-lg border bg-white shadow-sm overflow-hidden">
-                <div className="relative h-[200px]">
+                <div className="relative h-[500px]">
                   <Image
-                    src="/placeholder.svg?height=400&width=600&text=Specialty+Practice+Rebrand"
+                    src="/3.png"
                     alt="Specialty Practice Rebrand"
                     fill
                     className="object-cover"
@@ -288,9 +288,9 @@ export default function CaseStudiesPage() {
 
               {/* Case Study 3 */}
               <div className="rounded-lg border bg-white shadow-sm overflow-hidden">
-                <div className="relative h-[200px]">
+                <div className="relative h-[500px]">
                   <Image
-                    src="/placeholder.svg?height=400&width=600&text=Veterinary+Hospital+Website"
+                    src="/4.png"
                     alt="Veterinary Hospital Website"
                     fill
                     className="object-cover"
@@ -300,9 +300,9 @@ export default function CaseStudiesPage() {
                   <div className="inline-block rounded-full bg-theme-yellow/10 px-3 py-1 text-sm font-medium text-theme-yellow mb-4">
                     Veterinary
                   </div>
-                  <h3 className="text-xl font-bold mb-2">24/7 Emergency Veterinary Hospital</h3>
+                  <h3 className="text-xl font-bold mb-2">24/7 Emergency  Hospital</h3>
                   <p className="text-muted-foreground mb-4">
-                    A veterinary hospital offering emergency services needed a website that clearly communicated their
+                    A hospital offering emergency services needed a website that clearly communicated their
                     services and streamlined emergency intake.
                   </p>
                   <h4 className="font-bold mb-2">Key Improvements:</h4>
@@ -342,9 +342,9 @@ export default function CaseStudiesPage() {
 
               {/* Case Study 4 */}
               <div className="rounded-lg border bg-white shadow-sm overflow-hidden">
-                <div className="relative h-[200px]">
+                <div className="relative h-[500px]">
                   <Image
-                    src="/placeholder.svg?height=400&width=600&text=Mental+Health+Practice"
+                    src="/5.png"
                     alt="Mental Health Practice"
                     fill
                     className="object-cover"

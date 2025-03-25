@@ -19,7 +19,7 @@ import {
 } from "lucide-react"
 import { WebsiteShowcaseGrid, type Website } from "@/components/website-showcase-grid"
 import { Header } from "./header"
-
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 // Sample website data for the showcase grid
 const templateShowcases = [
   {
@@ -99,7 +99,6 @@ const clientShowcases = [
   },
 
 ];
-
 
 const caseStudies: Website[] = [
   {
@@ -185,13 +184,19 @@ export default function Home() {
               </div>
               <div className="flex items-center justify-center">
                 <div className="relative h-[350px] w-full md:h-[450px] lg:h-[500px] rounded-lg overflow-hidden shadow-2xl border border-white/20 backdrop-blur-sm">
-                  <Image
+                  {/* <Image
                     src="/placeholder.svg?height=500&width=800&text=Healthcare+Websites"
                     alt="Medical website showcase"
                     fill
                     className="object-contain"
                     priority
+                  /> */}
+                  <DotLottieReact
+                    src="https://lottie.host/6fb046d4-4465-4bf6-8558-c8c2307753b2/N5SPT1hvT8.lottie"
+                    loop
+                    autoplay
                   />
+
                 </div>
               </div>
             </div>

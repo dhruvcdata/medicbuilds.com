@@ -137,7 +137,7 @@ export default function ShowcasePage() {
       <Header />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="w-full py-12 md:py-24 bg-gradient-to-br from-theme-blue to-theme-purple text-white relative overflow-hidden">
+        <section className="w-full py-12 md:py-24 bg-theme-blue text-white relative overflow-hidden">
           <div className="absolute inset-0 opacity-10">
             <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
               <defs>
@@ -303,7 +303,7 @@ export default function ShowcasePage() {
                 </div>
                 <div className="relative min-h-[300px] md:min-h-full">
                   <Image
-                    src="/placeholder.svg?height=600&width=800&text=Medical+Group+Website"
+                    src="/case.jpg"
                     alt="Medical Group website showcase"
                     fill
                     className="object-cover"
