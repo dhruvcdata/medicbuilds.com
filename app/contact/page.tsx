@@ -157,14 +157,14 @@ export default function ContactPage() {
                     <Phone className="h-6 w-6 text-primary mt-0.5" />
                     <div>
                       <h3 className="font-bold">Phone</h3>
-                      <p className="text-muted-foreground">(555) 123-4567</p>
+                      <p className="text-muted-foreground">+1 (647) 633-6042 </p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
                     <Mail className="h-6 w-6 text-primary mt-0.5" />
                     <div>
                       <h3 className="font-bold">Email</h3>
-                      <p className="text-muted-foreground">contact@medicbuilds.com</p>
+                      <p className="text-muted-foreground">info@cdatainsights.com</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
@@ -172,20 +172,22 @@ export default function ContactPage() {
                     <div>
                       <h3 className="font-bold">Office</h3>
                       <p className="text-muted-foreground">
-                        123 Dental Plaza, Suite 200
+                        United States
                         <br />
-                        San Francisco, CA 94103
+                        Canada
+                        <br />
+                        United Kingdom
+                        <br />
+                        India
                       </p>
                     </div>
                   </div>
                 </div>
                 <div className="rounded-lg border overflow-hidden">
-                  <Image
-                    src="/placeholder.svg?height=400&width=600&text=Map+Location"
-                    alt="Office location map"
-                    width={600}
-                    height={400}
-                    className="w-full h-auto"
+                  <img
+                    src="/Map.png"
+                    alt="Office Locations"
+                    className="w-full h-auto max-h-78 object-cover rounded-lg"
                   />
                 </div>
               </div>
@@ -444,13 +446,13 @@ export default function ContactPage() {
           </div>
           <div className="flex items-center gap-6">
             <Link
-              href="#"
+              href="/privacy"
               className="text-sm font-medium text-theme-purple hover:text-theme-purple/80 transition-colors duration-300"
             >
               Privacy Policy
             </Link>
             <Link
-              href="#"
+              href="/terms"
               className="text-sm font-medium text-theme-purple hover:text-theme-purple/80 transition-colors duration-300"
             >
               Terms of Service

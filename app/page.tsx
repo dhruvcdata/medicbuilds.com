@@ -29,7 +29,7 @@ const templateShowcases = [
     description: "A clean, modern template for medical clinics with online booking and patient portal integration.",
     tags: ["General Practice", "Online Booking"],
     category: "Template",
-    imageUrl: "./t.jpg",
+    imageUrl: "/temp/1.png",
   },
   {
     id: "t2",
@@ -38,7 +38,7 @@ const templateShowcases = [
     description: "Designed for medical specialists with detailed service pages and before/after galleries.",
     tags: ["Specialists", "Before/After"],
     category: "Template",
-    imageUrl: "./t.jpg",
+    imageUrl: "/temp/2.png",
   },
   {
     id: "t3",
@@ -47,16 +47,16 @@ const templateShowcases = [
     description: "Child-friendly medical website template with interactive elements and educational resources.",
     tags: ["Pediatrics", "Interactive"],
     category: "Template",
-    imageUrl: "./t.jpg",
+    imageUrl: "/temp/3.png",
   },
   {
     id: "t4",
-    title: "Wellness Center",
-    url: "https://preview.themeforest.net/item/saveo-inhome-care-agency-wp-theme/full_screen_preview/21205308?_ga=2.201712407.762406414.1742917173-634426705.1741800722",
-    description: "Holistic health and wellness template with appointment booking and practitioner profiles.",
+    title: "Vet Clinic",
+    url: "https://vetic.in/pet-clinic-delhi",
+    description: "Holistic health and Vet Clinic template with appointment booking and practitioner profiles.",
     tags: ["Wellness", "Holistic"],
     category: "Template",
-    imageUrl: "./t.jpg",
+    imageUrl: "/temp/4.png",
   },
   {
     id: "t5",
@@ -65,7 +65,7 @@ const templateShowcases = [
     description: "Professional template for surgical practices with procedure information and patient resources.",
     tags: ["Surgery", "Educational"],
     category: "Template",
-    imageUrl: "./t.jpg",
+    imageUrl: "/temp/5.png",
   },
   {
     id: "t6",
@@ -74,7 +74,7 @@ const templateShowcases = [
     description: "Calming, accessible template for mental health professionals with resources and appointment booking.",
     tags: ["Mental Health", "Resources"],
     category: "Template",
-    imageUrl: "./t.jpg",
+    imageUrl: "/temp/6.png",
   },
 ];
 
@@ -252,7 +252,7 @@ export default function Home() {
           </div>
         </section>
 
-
+        {/* 
         <section className="w-full py-12 md:py-16 bg-gradient-to-r from-theme-blue to-theme-purple text-white">
           <div className="container px-4 md:px-6">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
@@ -274,7 +274,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Features Section */}
         <section id="features" className="w-full py-12 md:py-24 lg:py-32 relative overflow-hidden">
@@ -375,7 +375,7 @@ export default function Home() {
         </section>
 
         {/* Client Showcase Section */}
-        <section id="showcase" className="w-full py-12 md:py-24 lg:py-32">
+        {/* <section id="showcase" className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
             <WebsiteShowcaseGrid
               websites={clientShowcases}
@@ -394,10 +394,10 @@ export default function Home() {
               </Button>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Case Studies Section */}
-        <section
+        {/* <section
           id="case-studies"
           className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-br from-theme-blue/5 to-theme-purple/5"
         >
@@ -415,10 +415,10 @@ export default function Home() {
               </Button>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Process Section */}
-        <section className="w-full py-16 md:py-28 lg:py-32 bg-theme-blue  text-white relative overflow-hidden">
+        {/* <section className="w-full py-16 md:py-28 lg:py-32 bg-theme-blue  text-white relative overflow-hidden">
           <div className="absolute inset-0 opacity-15">
             <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" className="rotate-12">
               <defs>
@@ -445,13 +445,13 @@ export default function Home() {
             </div>
 
             <div className="mx-auto max-w-7xl relative">
-              {/* Progress Line */}
+           
               <div className="hidden md:block absolute left-16 right-16 top-24 h-1 bg-white/20 rounded-full">
                 <div className="h-full bg-white/80 rounded-full animate-progress-glow" style={{ width: '100%' }} />
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 lg:gap-12">
-                {/* Consultation Phase */}
+       
                 <div className="relative group">
                   <div className="absolute -inset-2 bg-white/10 rounded-2xl blur-xl opacity-0 group-hover:opacity-40 transition-opacity duration-300"></div>
                   <div className="relative flex flex-col items-center space-y-6 rounded-xl bg-white/5 backdrop-blur-lg p-8 border-2 border-white/10 transform transition-all hover:scale-[1.02] hover:border-theme-teal/50">
@@ -478,7 +478,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                {/* Design Phase */}
+       
                 <div className="relative group mt-10 md:mt-0">
                   <div className="absolute -inset-2 bg-white/10 rounded-2xl blur-xl opacity-0 group-hover:opacity-40 transition-opacity duration-300"></div>
                   <div className="relative flex flex-col items-center space-y-6 rounded-xl bg-white/5 backdrop-blur-lg p-8 border-2 border-white/10 transform transition-all hover:scale-[1.02] hover:border-theme-purple/50">
@@ -505,7 +505,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                {/* Launch Phase */}
+
                 <div className="relative group mt-10 md:mt-0">
                   <div className="absolute -inset-2 bg-white/10 rounded-2xl blur-xl opacity-0 group-hover:opacity-40 transition-opacity duration-300"></div>
                   <div className="relative flex flex-col items-center space-y-6 rounded-xl bg-white/5 backdrop-blur-lg p-8 border-2 border-white/10 transform transition-all hover:scale-[1.02] hover:border-theme-blue/50">
@@ -543,7 +543,7 @@ export default function Home() {
               </button>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Testimonials Section */}
         <section id="testimonials" className="w-full py-12 md:py-24 lg:py-32">
@@ -728,13 +728,13 @@ export default function Home() {
           </div>
           <div className="flex items-center gap-6">
             <Link
-              href="#"
+              href="/privacy"
               className="text-sm font-medium text-theme-purple hover:text-theme-purple/80 transition-colors duration-300"
             >
               Privacy Policy
             </Link>
             <Link
-              href="#"
+              href="/terms"
               className="text-sm font-medium text-theme-purple hover:text-theme-purple/80 transition-colors duration-300"
             >
               Terms of Service

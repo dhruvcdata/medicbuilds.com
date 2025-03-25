@@ -14,18 +14,20 @@ export function Header() {
     const NavLinks = () => (
         <>
             <Link
-                href="#features"
+                href="/"
                 className="text-sm font-medium hover:text-theme-blue block py-2 md:inline-block"
                 onClick={() => setIsMobileMenuOpen(false)}
             >
-                Features
+                Home
             </Link>
+
+
             <Link
                 href="/showcase"
                 className="text-sm font-medium hover:text-theme-blue block py-2 md:inline-block"
                 onClick={() => setIsMobileMenuOpen(false)}
             >
-                Showcase
+                Portfolio
             </Link>
             <Link
                 href="/pricing"

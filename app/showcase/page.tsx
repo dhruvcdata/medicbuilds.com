@@ -26,7 +26,7 @@ const templateShowcases = [
     description: "A clean, modern template for medical clinics with online booking and patient portal integration.",
     tags: ["General Practice", "Online Booking"],
     category: "Template",
-    imageUrl: "./t.jpg",
+    imageUrl: "/temp/1.png",
   },
   {
     id: "t2",
@@ -35,7 +35,7 @@ const templateShowcases = [
     description: "Designed for medical specialists with detailed service pages and before/after galleries.",
     tags: ["Specialists", "Before/After"],
     category: "Template",
-    imageUrl: "./t.jpg",
+    imageUrl: "/temp/2.png",
   },
   {
     id: "t3",
@@ -44,16 +44,16 @@ const templateShowcases = [
     description: "Child-friendly medical website template with interactive elements and educational resources.",
     tags: ["Pediatrics", "Interactive"],
     category: "Template",
-    imageUrl: "./t.jpg",
+    imageUrl: "/temp/3.png",
   },
   {
     id: "t4",
-    title: "Wellness Center",
-    url: "https://preview.themeforest.net/item/saveo-inhome-care-agency-wp-theme/full_screen_preview/21205308?_ga=2.201712407.762406414.1742917173-634426705.1741800722",
-    description: "Holistic health and wellness template with appointment booking and practitioner profiles.",
+    title: "Vet Clinic",
+    url: "https://vetic.in/pet-clinic-delhi",
+    description: "Holistic health and Vet Clinic template with appointment booking and practitioner profiles.",
     tags: ["Wellness", "Holistic"],
     category: "Template",
-    imageUrl: "./t.jpg",
+    imageUrl: "/temp/4.png",
   },
   {
     id: "t5",
@@ -62,7 +62,7 @@ const templateShowcases = [
     description: "Professional template for surgical practices with procedure information and patient resources.",
     tags: ["Surgery", "Educational"],
     category: "Template",
-    imageUrl: "./t.jpg",
+    imageUrl: "/temp/5.png",
   },
   {
     id: "t6",
@@ -71,7 +71,7 @@ const templateShowcases = [
     description: "Calming, accessible template for mental health professionals with resources and appointment booking.",
     tags: ["Mental Health", "Resources"],
     category: "Template",
-    imageUrl: "./t.jpg",
+    imageUrl: "/temp/6.png",
   },
 ];
 
@@ -515,7 +515,7 @@ export default function ShowcasePage() {
         </section>
 
         {/* Client Showcase Section */}
-        <section className="w-full py-12 md:py-24 bg-gradient-to-br from-theme-blue/5 to-theme-purple/5">
+        {/* <section className="w-full py-12 md:py-24 bg-gradient-to-br from-theme-blue/5 to-theme-purple/5">
           <div className="container px-4 md:px-6">
             <WebsiteShowcaseGrid
               websites={clientShowcases}
@@ -524,7 +524,7 @@ export default function ShowcasePage() {
               description="Examples of our work for various healthcare providers. See how we've helped medical practices establish their online presence."
             />
           </div>
-        </section>
+        </section> */}
 
         {/* CTA Section */}
         <section className="w-full py-12 md:py-24 bg-gradient-to-r from-theme-blue to-theme-purple text-white relative overflow-hidden">
@@ -573,13 +573,13 @@ export default function ShowcasePage() {
           </div>
           <div className="flex items-center gap-6">
             <Link
-              href="#"
+              href="/privacy"
               className="text-sm font-medium text-theme-purple hover:text-theme-purple/80 transition-colors duration-300"
             >
               Privacy Policy
             </Link>
             <Link
-              href="#"
+              href="/terms"
               className="text-sm font-medium text-theme-purple hover:text-theme-purple/80 transition-colors duration-300"
             >
               Terms of Service

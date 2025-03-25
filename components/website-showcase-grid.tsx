@@ -51,7 +51,7 @@ export function WebsiteShowcaseGrid({
           <div className="space-y-2">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">{title}</h2>
             {description && (
-              <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+              <p className="max-w-[1100px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                 {description}
               </p>
             )}
@@ -107,7 +107,7 @@ export function WebsiteShowcaseGrid({
       {/* Full-screen popup with iframe */}
       {expandedSite && (
         <div className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4">
-          <div className="bg-white rounded-lg w-full max-w-6xl h-[90vh] flex flex-col">
+          <div className="bg-white rounded-lg w-full max-w-7xl h-[95vh] flex flex-col">
             <div className="flex items-center justify-between p-4 border-b">
               <h3 className="font-bold text-xl">{expandedSite.title}</h3>
               <Button
