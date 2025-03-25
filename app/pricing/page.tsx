@@ -272,7 +272,7 @@ export default function PricingPage() {
           </div>
         </section>
 
-        {/* CTA Section */}
+        {/* CTA Sectionwebhjbehdwsbcn */}
         <section className="w-full py-12 md:py-24 bg-gradient-to-r from-theme-blue to-theme-purple text-white">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
