@@ -339,25 +339,25 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Stats Section */}
+
         <section className="w-full py-12 md:py-16 bg-gradient-to-r from-theme-blue to-theme-purple text-white">
           <div className="container px-4 md:px-6">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
               <div className="space-y-2">
-                <h3 className="text-3xl font-bold">500+</h3>
-                <p className="text-white/80">Medical Websites</p>
+                <h3 className="text-3xl font-bold">25+</h3>
+                <p className="text-white/80">Innovative Solutions</p>
               </div>
               <div className="space-y-2">
-                <h3 className="text-3xl font-bold">98%</h3>
-                <p className="text-white/80">Client Satisfaction</p>
+                <h3 className="text-3xl font-bold">90%</h3>
+                <p className="text-white/80">Client Recommendation Rate</p>
               </div>
               <div className="space-y-2">
-                <h3 className="text-3xl font-bold">45%</h3>
-                <p className="text-white/80">Avg. Patient Increase</p>
+                <h3 className="text-3xl font-bold">15+</h3>
+                <p className="text-white/80">years of experience</p>
               </div>
               <div className="space-y-2">
-                <h3 className="text-3xl font-bold">24/7</h3>
-                <p className="text-white/80">Support Available</p>
+                <h3 className="text-3xl font-bold">100%</h3>
+                <p className="text-white/80">Dedicated Support</p>
               </div>
             </div>
           </div>
@@ -505,59 +505,129 @@ export default function Home() {
         </section>
 
         {/* Process Section */}
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-r from-theme-blue to-theme-purple text-white relative overflow-hidden">
-          <div className="absolute inset-0 opacity-10">
-            <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+        <section className="w-full py-16 md:py-28 lg:py-32 bg-gradient-to-br from-theme-blue via-theme-purple to-theme-indigo text-white relative overflow-hidden">
+          <div className="absolute inset-0 opacity-15">
+            <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" className="rotate-12">
               <defs>
-                <pattern id="circles" width="40" height="40" patternUnits="userSpaceOnUse">
-                  <circle cx="20" cy="20" r="3" fill="#ffffff" />
+                <pattern id="medical-pattern" width="60" height="60" patternUnits="userSpaceOnUse">
+                  <path d="M0 30L30 0 60 30 30 60 0 30" fill="rgba(255,255,255,0.08)" />
                 </pattern>
               </defs>
-              <rect width="100%" height="100%" fill="url(#circles)" />
+              <rect width="100%" height="100%" fill="url(#medical-pattern)" />
             </svg>
           </div>
           <div className="container px-4 md:px-6 relative z-10">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-3 py-1 text-sm backdrop-blur-sm">
-                Our Process
+            <div className="flex flex-col items-center justify-center space-y-6 text-center mb-16">
+              <div className="inline-flex items-center rounded-full border-2 border-white/30 bg-white/15 px-6 py-2 text-lg font-medium backdrop-blur-lg transition-all hover:scale-105">
+                🏆 Award-Winning Process for Medical Professionals
               </div>
-              <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                  Simple Steps to Your Perfect Medical Website
+              <div className="space-y-4">
+                <h2 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-100">
+                  Crafting Digital Excellence for Healthcare
                 </h2>
-                <p className="max-w-[900px] text-white/80 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Getting your healthcare practice online is easy with our streamlined approach.
+                <p className="max-w-4xl mx-auto text-lg md:text-xl text-white/90 leading-relaxed">
+                  Our 3-phase development process ensures HIPAA-compliant, patient-centric websites that enhance trust and conversion for medical practices.
                 </p>
               </div>
             </div>
-            <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 py-12 md:grid-cols-3">
-              <div className="flex flex-col items-center space-y-4 rounded-lg bg-white/10 backdrop-blur-sm p-6 border border-white/20">
-                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white text-2xl font-bold text-theme-purple">
-                  1
-                </div>
-                <h3 className="text-xl font-bold">Consultation</h3>
-                <p className="text-center text-white/80">
-                  We discuss your healthcare practice's needs, goals, and design preferences to create a tailored plan.
-                </p>
+
+            <div className="mx-auto max-w-7xl relative">
+              {/* Progress Line */}
+              <div className="hidden md:block absolute left-16 right-16 top-24 h-1 bg-white/20 rounded-full">
+                <div className="h-full bg-white/80 rounded-full animate-progress-glow" style={{ width: '100%' }} />
               </div>
-              <div className="flex flex-col items-center space-y-4 rounded-lg bg-white/10 backdrop-blur-sm p-6 border border-white/20">
-                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white text-2xl font-bold text-theme-teal">
-                  2
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 lg:gap-12">
+                {/* Consultation Phase */}
+                <div className="relative group">
+                  <div className="absolute -inset-2 bg-white/10 rounded-2xl blur-xl opacity-0 group-hover:opacity-40 transition-opacity duration-300"></div>
+                  <div className="relative flex flex-col items-center space-y-6 rounded-xl bg-white/5 backdrop-blur-lg p-8 border-2 border-white/10 transform transition-all hover:scale-[1.02] hover:border-theme-teal/50">
+                    <div className="flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-theme-teal to-theme-blue shadow-lg">
+                      <span className="text-3xl font-bold text-white">1</span>
+                      <svg className="absolute -right-3 -top-3 w-8 h-8 text-theme-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                      </svg>
+                    </div>
+                    <h3 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-theme-teal to-theme-blue">
+                      Discovery & Strategy
+                    </h3>
+                    <div className="space-y-3 text-center text-white/85">
+                      <ul className="space-y-2 text-left list-disc list-inside marker:text-theme-teal">
+                        <li>Practice needs analysis</li>
+                        <li>Patient journey mapping</li>
+                        <li>HIPAA compliance audit</li>
+                        <li>Content strategy session</li>
+                      </ul>
+                    </div>
+                    <div className="mt-4 px-4 py-2 bg-white/10 rounded-full text-sm font-medium">
+                      ⏱️ 2-5 Business Days
+                    </div>
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold">Design & Development</h3>
-                <p className="text-center text-white/80">
-                  Our team creates a custom website tailored to your medical practice with all the features you need.
-                </p>
-              </div>
-              <div className="flex flex-col items-center space-y-4 rounded-lg bg-white/10 backdrop-blur-sm p-6 border border-white/20">
-                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white text-2xl font-bold text-theme-blue">
-                  3
+
+                {/* Design Phase */}
+                <div className="relative group mt-10 md:mt-0">
+                  <div className="absolute -inset-2 bg-white/10 rounded-2xl blur-xl opacity-0 group-hover:opacity-40 transition-opacity duration-300"></div>
+                  <div className="relative flex flex-col items-center space-y-6 rounded-xl bg-white/5 backdrop-blur-lg p-8 border-2 border-white/10 transform transition-all hover:scale-[1.02] hover:border-theme-purple/50">
+                    <div className="flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-theme-purple to-theme-indigo shadow-lg">
+                      <span className="text-3xl font-bold text-white">2</span>
+                      <svg className="absolute -right-3 -top-3 w-8 h-8 text-theme-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                    </div>
+                    <h3 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-theme-purple to-theme-indigo">
+                      Medical-Optimized Design
+                    </h3>
+                    <div className="space-y-3 text-center text-white/85">
+                      <ul className="space-y-2 text-left list-disc list-inside marker:text-theme-purple">
+                        <li>Patient-first UI/UX design</li>
+                        <li>Telemedicine integration</li>
+                        <li>Appointment scheduling system</li>
+                        <li>Medical SEO optimization</li>
+                      </ul>
+                    </div>
+                    <div className="mt-4 px-4 py-2 bg-white/10 rounded-full text-sm font-medium">
+                      ⏱️ 7-14 Business Days
+                    </div>
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold">Launch & Support</h3>
-                <p className="text-center text-white/80">
-                  Your website goes live with ongoing support and maintenance to ensure it continues to perform.
-                </p>
+
+                {/* Launch Phase */}
+                <div className="relative group mt-10 md:mt-0">
+                  <div className="absolute -inset-2 bg-white/10 rounded-2xl blur-xl opacity-0 group-hover:opacity-40 transition-opacity duration-300"></div>
+                  <div className="relative flex flex-col items-center space-y-6 rounded-xl bg-white/5 backdrop-blur-lg p-8 border-2 border-white/10 transform transition-all hover:scale-[1.02] hover:border-theme-blue/50">
+                    <div className="flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-theme-blue to-theme-teal shadow-lg">
+                      <span className="text-3xl font-bold text-white">3</span>
+                      <svg className="absolute -right-3 -top-3 w-8 h-8 text-theme-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                      </svg>
+                    </div>
+                    <h3 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-theme-blue to-theme-teal">
+                      Secure Launch & Growth
+                    </h3>
+                    <div className="space-y-3 text-center text-white/85">
+                      <ul className="space-y-2 text-left list-disc list-inside marker:text-theme-blue">
+                        <li>SSL & HIPAA compliance checks</li>
+                        <li>Staff training & documentation</li>
+                        <li>Ongoing performance monitoring</li>
+                        <li>Patient acquisition analytics</li>
+                      </ul>
+                    </div>
+                    <div className="mt-4 px-4 py-2 bg-white/10 rounded-full text-sm font-medium">
+                      ⏱️ 3-5 Business Days
+                    </div>
+                  </div>
+                </div>
               </div>
+            </div>
+
+            <div className="mt-20 text-center">
+              <button className="inline-flex items-center justify-center rounded-2xl bg-white/10 px-8 py-4 text-lg font-bold text-white backdrop-blur-lg border-2 border-white/20 transition-all hover:bg-white/20 hover:border-theme-teal hover:scale-105">
+                🚀 Start Your Medical Website Journey
+                <svg className="ml-3 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </button>
             </div>
           </div>
         </section>
@@ -734,20 +804,32 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <footer className="w-full border-t py-6 md:py-0 bg-gray-50">
+      <footer className="w-full bg-gradient-to-r from-theme-blue/10 to-theme-purple/10 border-t py-6 md:py-0">
         <div className="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
-          <div className="flex items-center gap-2">
-            <MedicalIcon className="h-5 w-5 text-theme-blue" />
-            <p className="text-sm font-medium">© 2025 MedicBuilds. All rights reserved.</p>
+          <div className="flex items-center gap-4">
+            {/* <Tooth className="h-6 w-6 text-theme-blue" /> */}
+            <div className="flex flex-col">
+              <p className="text-sm font-bold text-theme-blue">MedicBuilds</p>
+              <p className="text-xs text-muted-foreground">© 2025 All rights reserved</p>
+            </div>
           </div>
-          <div className="flex gap-4">
-            <Link href="#" className="text-sm font-medium hover:text-theme-blue">
+          <div className="flex items-center gap-6">
+            <Link
+              href="#"
+              className="text-sm font-medium text-theme-purple hover:text-theme-purple/80 transition-colors duration-300"
+            >
               Privacy Policy
             </Link>
-            <Link href="#" className="text-sm font-medium hover:text-theme-blue">
+            <Link
+              href="#"
+              className="text-sm font-medium text-theme-purple hover:text-theme-purple/80 transition-colors duration-300"
+            >
               Terms of Service
             </Link>
-            <Link href="/contact" className="text-sm font-medium hover:text-theme-blue">
+            <Link
+              href="/contact"
+              className="px-4 py-2 bg-theme-blue text-white rounded-full text-sm font-medium hover:bg-theme-blue/90 transition-all duration-300 shadow-md hover:shadow-lg"
+            >
               Contact Us
             </Link>
           </div>
