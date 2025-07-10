@@ -164,7 +164,7 @@ export default function ContactPage() {
                     <Mail className="h-6 w-6 text-primary mt-0.5" />
                     <div>
                       <h3 className="font-bold">Email</h3>
-                      <p className="text-muted-foreground">info@medicbuilds.com</p>
+                      <p className="text-muted-foreground">nitin@medicbuilds.com</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
